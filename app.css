@@ -1,0 +1,139 @@
+/* Import Fira Sans font */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans&display=swap');
+@import url('./prism.css');
+
+* {
+  box-sizing: border-box
+    /* Why is this not default? */
+}
+
+:root {
+  --base-font: 'IBM Plex Sans', sans-serif;
+  --contrast: rgb(34, 34, 34);
+  --primary: rgb(255, 255, 255)
+}
+
+body,
+html {
+  font-family: var(--base-font);
+  color: var(--contrast);
+  background: var(--primary);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.1em
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 16px 0
+}
+
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  position: relative;
+  display: block;
+  font-weight: 600;
+  padding-left: 25px
+}
+
+h1::before {
+  height: 100%;
+  width: 0.9%;
+  left: 0;
+  content: '';
+  position: absolute;
+  background: var(--contrast)
+}
+
+h2 {
+  font-size: 2em;
+  position: relative
+}
+
+h3 {
+  font-size: 1.5em;
+  position: relative
+}
+
+h2::after,
+h3::after {
+  background: var(--contrast);
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  content: '';
+  position: absolute;
+}
+
+h2::after {
+  width: 4.5%
+}
+
+h3::after {
+  width: 2.5%
+}
+
+p {
+  font-size: 1em;
+  text-align: left
+}
+
+strong,
+a {
+  font-weight: 600;
+  position: relative;
+  color: var(--contrast);
+  text-decoration: none
+}
+
+strong::after,
+a::after {
+  height: 2.5px;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background: var(--contrast)
+}
+
+a::after { width: 0%; bottom: -1px }
+a:hover::after { width: 100% }
+
+strong::after {
+  width: 100%
+}
+
+a::after {
+  width: 0
+}
+
+code {
+  background: var(--contrast);
+  padding: 3px
+}
+
+article {
+  padding: 20px;
+  display: block
+}
+
+section {
+  margin: 0 auto;
+  max-width: 1000px
+}
